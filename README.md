@@ -20,7 +20,7 @@ cd docker-compose && \
 sudo systemctl start docker && \
 sudo systemctl enable docker
 ```
-В конфигурацуионном файле prometheus/prometheus.yaml вместо <node_exporter> указать адрес хостовой машины и, по необходимости, добавить другое хосты:\
+В конфигурацуионном файле prometheus/prometheus.yaml вместо <node_exporter> указать адрес хостовой машины и, по необходимости, добавить другие хосты:\
 "- targets: ['HOST_IP:9100']"
 
 ```
@@ -36,7 +36,7 @@ cd docker-compose && \
 sudo systemctl start docker && \
 sudo systemctl enable docker
 ```
-В конфигурацуионном файле prometheus/prometheus.yaml вместо <node_exporter> указать адрес хостовой машины и, по необходимости, добавить другое хосты:\
+В конфигурацуионном файле prometheus/prometheus.yaml вместо <node_exporter> указать адрес хостовой машины и, по необходимости, добавить другие хосты:\
 "- targets: ['HOST_IP:9100']"
 ```
 sudo docker-compose up -d
