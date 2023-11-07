@@ -4,31 +4,35 @@
 - grafana
 
 Мониторинг контейнеров:
-- protainer
+- portainer
 
 Конфигурация:
 - prometheus/prometheus.yaml
 
 Запуск:
 
-- Ubuntu:\
-"sudo apt update && \
+**Ubuntu:**
+```
+sudo apt update -y && \
 sudo apt install docker docker-compose git -y && \
 git clone https://github.com/stepanovpv/docker-compose && \
 cd docker-compose && \
 sudo systemctl start docker && \
-sudo systemctl enable docker && \ 
-sudo docker-compose up -d"
+sudo systemctl enable docker && \
+sudo docker-compose up -d
+```
 
 
-- CentOS, REDOS:
-"sudo dnf update &&
-sudo dnf install docker-ce docker-compose git -y &&\
-git clone https://github.com/stepanovpv/docker-compose &&\
-cd docker-compose &&\
+**CentOS, REDOS:**
+```
+sudo dnf update -y && \
+sudo dnf install docker-ce docker-compose git -y && \
+git clone https://github.com/stepanovpv/docker-compose && \
+cd docker-compose && \
 sudo systemctl start docker && \
 sudo systemctl enable docker && \ 
-sudo docker-compose up -d"
+sudo docker-compose up -d
+```
 
 Запущенные сервисы:
 - http://<IP хоста>:3000 - grafana
