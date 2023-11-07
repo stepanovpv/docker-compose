@@ -7,7 +7,7 @@ services:
     ports:
       - '9090:9090'
     volumes:
-      - /home/pavel/docker-compose/prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
+      - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
       - prometheus-data:/prometheus
     container_name: prometheus
     hostname: prometheus
