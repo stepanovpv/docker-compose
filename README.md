@@ -18,10 +18,14 @@ sudo apt install docker docker-compose git -y && \
 git clone https://github.com/stepanovpv/docker-compose && \
 cd docker-compose && \
 sudo systemctl start docker && \
-sudo systemctl enable docker && \
+sudo systemctl enable docker
+```
+В конфигурацуионном файле prometheus/prometheus.yaml вместо <node_exporter> указать адрес хостовой машины и, по необходимости, добавить другое хосты:\
+"- targets: ['HOST_IP:9100']"
+
+```
 sudo docker-compose up -d
 ```
-
 
 **CentOS, REDOS:**
 ```
@@ -30,7 +34,11 @@ sudo dnf install docker-ce docker-compose git -y && \
 git clone https://github.com/stepanovpv/docker-compose && \
 cd docker-compose && \
 sudo systemctl start docker && \
-sudo systemctl enable docker && \ 
+sudo systemctl enable docker
+```
+В конфигурацуионном файле prometheus/prometheus.yaml вместо <node_exporter> указать адрес хостовой машины и, по необходимости, добавить другое хосты:\
+"- targets: ['HOST_IP:9100']"
+```
 sudo docker-compose up -d
 ```
 
